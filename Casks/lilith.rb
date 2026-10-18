@@ -23,4 +23,12 @@ cask "lilith" do
     "~/Library/HTTPStorages/dev.ugurgunes.lilith",
     "~/Library/Preferences/dev.ugurgunes.lilith.plist",
   ]
+
+  caveats <<~EOS
+    Lilith is not notarized by Apple, so macOS blocks the first launch.
+    In the warning, click Done (not Move to Trash). Then open
+    System Settings > Privacy & Security and click "Open Anyway" next to Lilith.
+    Upgrades keep the approval. Details:
+      https://github.com/ugurgunes95/lilith#first-launch-apple-could-not-verify-lilith
+  EOS
 end
